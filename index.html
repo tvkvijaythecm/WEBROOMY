@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webro | Digital Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- START: ONBOARDING SLIDER -->
+    <div id="onboarding" class="onboarding-overlay">
+        <div class="slide active" data-slide="1">
+            <img src="https://img.freepik.com/free-vector/digital-marketing-concept-illustration_114360-4835.jpg" alt="AI Adv">
+            <h2>AI Powered Ads</h2>
+            <p>Revolutionize your reach with intelligent advertising solutions.</p>
+        </div>
+        <div class="slide" data-slide="2">
+            <img src="https://img.freepik.com/free-vector/web-development-concept-illustration_114360-1570.jpg" alt="Dev">
+            <h2>Modern Development</h2>
+            <p>High-performance websites and mobile apps tailored for growth.</p>
+        </div>
+        <div class="slide" data-slide="3">
+            <img src="https://img.freepik.com/free-vector/graphic-design-concept-illustration_114360-2535.jpg" alt="Design">
+            <h2>Creative Graphics</h2>
+            <p>Visual identities that capture attention and build trust.</p>
+        </div>
+        <div class="onboarding-controls">
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="btn-group">
+                <button id="skipBtn" class="btn-text">Skip</button>
+                <button id="nextBtn" class="btn-main">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- USER FRONTEND CONTENT -->
+    <div id="frontend-app">
+        <!-- Hero Section -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="animate-up">Elevate Your <span class="text-orange">Digital Presence</span></h1>
+                    <p class="animate-up delay-1">Webro blends AI-driven strategy with cutting-edge design to scale your business.</p>
+                    <div class="hero-btns animate-up delay-2">
+                        <button class="btn-main" onclick="navigateTo('service')">Our Services</button>
+                        <button class="btn-outline" onclick="navigateTo('contact')">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <h2 class="section-title">Core Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-robot icon-orange"></i>
+                        <h3>AI Advertisement</h3>
+                        <p>Smart targeting and automated ad optimization for maximum ROI.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-code icon-blue"></i>
+                        <h3>Web & App Dev</h3>
+                        <p>Responsive, fast, and scalable digital products for all platforms.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-palette icon-orange"></i>
+                        <h3>Graphic Design</h3>
+                        <p>Branding and UI/UX designs that speak your brand's language.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-section">
+                <h2 class="section-title">Client Feedback</h2>
+                <div class="carousel" id="testimonial-carousel">
+                    <!-- JS injected testimonials -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="section-container">
+                <div class="about-header">
+                    <h1>About <span class="text-orange">Webro</span></h1>
+                    <p>We are a collective of creators, developers, and strategists.</p>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-eye icon-blue"></i>
+                        <h3>Our Vision</h3>
+                        <p>To become the global standard for AI-integrated digital agency services.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-bullseye icon-orange"></i>
+                        <h3>Our Mission</h3>
+                        <p>Empowering brands to scale using data-driven design and technology.</p>
+                    </div>
+                </div>
+
+                <div class="process-section">
+                    <h3 class="process-title">Working Procedure</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="time-dot"></div>
+                            <div class="time-content"><h4>Discovery</h4><p>Analyzing goals and user needs.</p></div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-dot"></div>
+                            <div class="time-content"><h4>Strategy</h4><p>Planning the roadmap and UI/UX.</p></div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-dot"></div>
+                            <div class="time-content"><h4>Execution</h4><p>Development and design phase.</p></div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="time-dot"></div>
+                            <div class="time-content"><h4>Launch</h4><p>QA testing and final deployment.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Page -->
+        <section id="service" class="page">
+            <div class="section-container">
+                <div class="service-detail-card">
+                    <div class="detail-header">
+                        <i class="fas fa-robot"></i>
+                        <h2>AI Powered Advertisement</h2>
+                    </div>
+                    <p>Leveraging Machine Learning to optimize ad spend and target the perfect audience in real-time.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Predictive Analytics</li>
+                        <li><i class="fas fa-check"></i> Automated A/B Testing</li>
+                        <li><i class="fas fa-check"></i> Dynamic Content Generation</li>
+                    </ul>
+                </div>
+
+                <div class="service-detail-card">
+                    <div class="detail-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h2>Web & App Development</h2>
+                    </div>
+                    <p>Building blazing fast experiences using React, Flutter, and Node.js.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Fully Responsive Layouts</li>
+                        <li><i class="fas fa-check"></i> SEO Optimized Structure</li>
+                        <li><i class="fas fa-check"></i> High Security Architecture</li>
+                    </ul>
+                </div>
+
+                <div class="service-detail-card">
+                    <div class="detail-header">
+                        <i class="fas fa-pen-nib"></i>
+                        <h2>Creative Graphic Design</h2>
+                    </div>
+                    <p>Visual storytelling that captures essence and drives conversions.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Brand Identity Kits</li>
+                        <li><i class="fas fa-check"></i> Social Media Creatives</li>
+                        <li><i class="fas fa-check"></i> High-End UI/UX Prototyping</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Page -->
+        <section id="projects" class="page">
+            <div class="section-container">
+                <h1 class="section-title">Our <span class="text-orange">Portfolio</span></h1>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-cat="all">All</button>
+                    <button class="filter-btn" data-cat="AI">AI</button>
+                    <button class="filter-btn" data-cat="Web">Web</button>
+                    <button class="filter-btn" data-cat="Design">Design</button>
+                </div>
+                <div class="projects-grid" id="projects-display">
+                    <!-- Dynamically loaded from Admin -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Page -->
+        <section id="contact" class="page">
+            <div class="section-container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+                        <p>Ready to start your project? We're waiting for you!</p>
+                        <div class="info-item"><i class="fas fa-envelope"></i> info@webro.my</div>
+                        <div class="info-item"><i class="fas fa-phone"></i> +60 123 456 789</div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="input-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" placeholder="WhatsApp Number" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-main full-width">Send Message</button>
+                    </form>
+                </div>
+                <div class="map-placeholder">
+                    <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" style="width: 50px; opacity: 0.5;">
+                    <p>Google Maps Integration Area</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Tab Bar -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active" onclick="navigateTo('home')">
+                <i class="fas fa-home"></i><span>Home</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('about')">
+                <i class="fas fa-user"></i><span>About</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('service')">
+                <i class="fas fa-concierge-bell"></i><span>Service</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('projects')">
+                <i class="fas fa-briefcase"></i><span>Projects</span>
+            </a>
+            <a href="#" class="nav-item" onclick="navigateTo('contact')">
+                <i class="fas fa-envelope"></i><span>Contact</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- ADMIN PANEL -->
+    <div id="admin-panel" class="admin-hidden">
+        <!-- Login Overlay -->
+        <div id="admin-login" class="login-overlay">
+            <div class="login-card">
+                <h2>Admin Login</h2>
+                <input type="text" id="adminUser" placeholder="Username">
+                <input type="password" id="adminPass" placeholder="Password">
+                <button class="btn-main" onclick="handleLogin()">Login</button>
+                <p id="loginError" class="error-text"></p>
+            </div>
+        </div>
+
+        <!-- Dashboard Wrapper -->
+        <div id="admin-dashboard" class="dashboard-hidden">
+            <aside class="sidebar">
+                <div class="logo">WEBRO <span>Admin</span></div>
+                <nav class="side-nav">
+                    <a href="#" class="active" onclick="showAdminTab('overview')"><i class="fas fa-chart-line"></i> Overview</a>
+                    <a href="#" onclick="showAdminTab('posts')"><i class="fas fa-folder-open"></i> Projects</a>
+                    <a href="#" onclick="showAdminTab('settings')"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="#" onclick="logout()" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </nav>
+            </aside>
+
+            <main class="admin-main">
+                <div id="overview" class="admin-tab active">
+                    <h1>Dashboard Overview</h1>
+                    <div class="stats-grid">
+                        <div class="stat-card"><h3>Total Projects</h3><p id="stat-posts">0</p></div>
+                        <div class="stat-card"><h3>Categories</h3><p id="stat-cats">0</p></div>
+                        <div class="stat-card"><h3>Status</h3><p>Online</p></div>
+                    </div>
+                </div>
+
+                <div id="posts" class="admin-tab">
+                    <div class="tab-header">
+                        <h1>Project Management</h1>
+                        <button class="btn-main" onclick="openModal()">+ Add New Project</button>
+                    </div>
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Thumbnail</th>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-posts-list">
+                            <!-- Dynamic Rows -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="settings" class="admin-tab">
+                    <h1>Site Settings</h1>
+                    <div class="settings-form">
+                        <label>Hero Headline</label>
+                        <input type="text" id="set-hero-title">
+                        <label>Hero Subtitle</label>
+                        <textarea id="set-hero-sub"></textarea>
+                        <button class="btn-main" onclick="saveSettings()">Save Changes</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Post Modal -->
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Add Project</h2>
+            <div class="form-grid">
+                <input type="text" id="p-title" placeholder="Project Title">
+                <select id="p-cat">
+                    <option value="AI">AI Powered</option>
+                    <option value="Web">Web/App</option>
+                    <option value="Design">Design</option>
+                </select>
+                <input type="text" id="p-img" placeholder="Thumbnail URL">
+                <input type="text" id="p-url" placeholder="Website URL">
+                <input type="text" id="p-video" placeholder="Video URL (YouTube)">
+                <select id="p-status">
+                    <option value="Publish">Publish</option>
+                    <option value="Draft">Draft</option>
+                </select>
+                <textarea id="p-desc" placeholder="Project Description" style="grid-column: span 2;"></textarea>
+            </div>
+            <div class="modal-btns">
+                <button class="btn-outline" onclick="closeModal()">Cancel</button>
+                <button class="btn-main" onclick="savePost()">Save Project</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Admin Access Button (Dev only) -->
+    <button id="adminTrigger" onclick="toggleAdminView()">⚙️ Admin</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
